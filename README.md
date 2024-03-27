@@ -1,3 +1,31 @@
+# Comentario acerca de la respuesta del examen:
+## Los endpoints quedaron:
+|Descripcion|Endpoint|Recibe|
+|----------|:-------------:|------|
+| Crear un usuario  |  POST   /api/user | {"fullname": "nombre de la persona","email": "correodelapersona@correo.com","pass": "123456"} |
+| Eliminar un usuario | DELETE /api/user/{id} | |
+| Actualizar un usuario | PUT    /api/user | {"id": "iddelregistroaactualizar","fullname": "nombre de la persona": "correodelapersona@correo.com","pass": "123456" } |
+| Conseguir la información de un usuario | GET    /api/user/{id} | |
+| *Todos los usuarios  | GET    /api/users |  |
+| *Login |POST   /api/login |{"email":"correodelapersona@correo.com","pass": "123456"} |
+| Crear un comentario |POST   /api/comment |{"user": "iddelusuario","coment_text": "un comentario","likes": "0"} |
+| Eliminar un comentario   | DELETE /api/comment/{id} | |
+| Actualizar un comentario | PUT    /api/comment | {"id": "iddelregistroaactualizar","coment_text": "un comentario actualizado","likes": "10"} } |
+| Conseguir la información de un comentario | GET /api/comment/{id}| |
+| *Todos los comentarios  | GET /api/comments | |
+| *Actualizar un like     | PUT   /api/like | {"id": "iddelregistroaactualizar"} |
+
+## Mis Comentarios
+* La interfaz no tiene una sesión como tal, solo se implementó el guardado en localstorage, para simular una sesión
+* Al no tener más información, la interfaz se realizó libre, primera pantalla con opción a iniciar sesión, registrarse normal, o registrarse con google auth, posterior la pantalla de usuarios no tiene filtros todos los usuarios ven todos los registros y puede agregar, editar, eliminar, ver, para la pantalla de comentarios igual, todos los usuarios puede ver todos los comentarios, crear, editar, eliminar,ver, y dar like a un comentario
+* Para la alta de usuarios -> El campo openid de la tabla user user, partiendo de la suposición que no es un dato necesario para la alta de un usuario normal ( no de google auth ), puede no enviarse el parámetro o enviarse la palabra "generate", que generara una string compuesto de "xxxxx" + un string random de 45 caracteres
+* Implementación de Google OAuth (deje las credenciales del proyecto, posterior lo eliminaré)
+* De la tabla de endpoints cree algunos métodos adicionales, suponiendo que serían necesarios para la interfaz
+* No se implementó seguridad en la API, ya que no fue requerida
+* Se agrego el .htaccess sencillo para redirigir las solicitud al index y tener pretty slugs
+
+* * *
+
 # Prueba técnica para Backend o Fullstack
 En este repositorio encontrarás todo lo necesario para completar la prueba y demostrar tus habilidades en el desarrollo de aplicaciones web del lado del servidor.
 
