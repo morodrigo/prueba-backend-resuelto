@@ -1,0 +1,25 @@
+#message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    /*background-color: #f44336;*/
+    /* Color de fondo del mensaje de error */
+    color: white;
+    /* Color del texto del mensaje */
+    z-index: 999999;
+}
+
+#message.success {
+/*  background-color: #4CAF50;*/
+    /* Color de fondo del mensaje de éxito */
+}
+
+.message-body {
+/* color: white !important;*/
+}
+.card>.card-content>.content {
+    word-break: break-word;
+}
+#viewData>p{
+word-wrap: break-word;
+}
